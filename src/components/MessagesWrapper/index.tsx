@@ -29,9 +29,14 @@ export function MessagesWrapper(props : MessagesWrapperProps) {
         return null;
     }
 
+    let receivingUser = new CometChat.User({});
+    receivingUser.setUid("sp-person-magiclogin-rpwverheij-gmail-com");
+
+
     return (
-        <CometChatMessages 
-            group = {group}
+        <CometChatMessages
+            user={receivingUser}
+            // group = {group}
             {...otherProps}
         />
     );
